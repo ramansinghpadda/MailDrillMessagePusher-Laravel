@@ -10,8 +10,8 @@ Create MAN_DRILL_API_KEY in confifuration file or .env file and set your mandril
 then you can simply copy paste ManDrillMessagePusher into services folder under laravel 5 app.
 
 example of usage
-
-
+<pre>
+<code>
 $newmail= new ManDrillMessagePusher("mails.default",['message'=>'custome message']);
       $newmail->to=[
                 [ 'email' => 'mailtorspadda@gmail.com',
@@ -22,6 +22,7 @@ $newmail= new ManDrillMessagePusher("mails.default",['message'=>'custome message
         $newmail->from_name='Test user';
         $newmail->subject="GREAT TEST";
         $newmail->push();
+</code></pre>
 
 
 ##  mails.default is the template path under resources/views/mails/default.blade.php
