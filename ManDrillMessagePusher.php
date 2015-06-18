@@ -35,7 +35,8 @@ class ManDrillMessagePusher
       * @param type $templateData
       */
      public function __construct($tempatePath=null,$templateData=array()) {
-            $this->html=view($tempatePath,$templateData)->render();
+		if($tempatePath){
+            	$this->html=view($tempatePath,$templateData)->render();}
      }
     
      
